@@ -1,0 +1,49 @@
+
+:root {
+    --page-margin: 28px;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --page-margin: 40px;
+    }
+}
+
+body {
+    margin: var(--page-margin);
+    
+    background: url(background.png), linear-gradient(180deg, #757070 0%, #454141 100%);
+    background-blend-mode: multiply, normal;
+
+    /* text */
+    color: #fff;
+    font-family: 'Kalam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.main-title {
+    font-family: 'Permanent Marker';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40.0652px;
+    line-height: 58px;
+
+    transform: rotate(-7.98deg);
+}
+
+.maneki {
+    mix-blend-mode: lighten;
+}
+
+iframe {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    iframe {
+        height: 700px;
+    }
+}
