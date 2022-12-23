@@ -11,9 +11,11 @@
 
 body {
     margin: var(--page-margin);
-    
-    background: url(background.png), linear-gradient(180deg, #757070 0%, #454141 100%);
+
+    background: linear-gradient(180deg, #757070 0%, #454141 100%);
+    background-image: url(background.png), linear-gradient(180deg, #757070 0%, #454141 100%);
     background-blend-mode: multiply, normal;
+    background-size: cover;
 
     /* text */
     color: #fff;
@@ -29,21 +31,63 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 40.0652px;
-    line-height: 58px;
+    font-size: 3rem;
+
+    position: absolute;
 
     transform: rotate(-7.98deg);
+}
+
+.col {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 32px;
 }
 
 .maneki {
     mix-blend-mode: lighten;
 }
 
-iframe {
-    width: 100%;
+.first-paragraph {
+  margin-top: 150px;
+}
+
+a {
+  color: rgb(170, 170, 217);
 }
 
 @media screen and (min-width: 768px) {
-    iframe {
-        height: 700px;
+    .main-title {
+        line-height: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-title {
+        line-height: 40px;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .col {
+      width: 100%;
+      max-width: 100%;
     }
 }
